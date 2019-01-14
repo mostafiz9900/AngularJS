@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/bootstrap-theme.css" rel="stylesheet"/>
+        <script src="js/angular.js"></script>
+
+    </head>
+    <body>
+        <div>Repeat </div>
+        <div ng-app="" ng-init="names=[
+{name:'Jani',country:'Norway'},
+{name:'Hege',country:'Sweden'},
+{name:'Kai',country:'Denmark'}]">
+<!--            <ul>
+                <li ng-repeat="m in names">
+                    {{m.name + ',' + m.country}}
+                </li>
+            </ul>-->
+<table class="table table-striped table-bordered">
+                <tr style= "border: 1px">
+                    <th >Name</th>
+                    <th>Country</th>
+                </tr>
+                <tr ng-repeat="m in names">
+                    <td>{{m.name}}</td>
+                    <td>{{m.country}}</td>
+                </tr>
+            </table>
+        </div>
+
+    </body>
+</html>

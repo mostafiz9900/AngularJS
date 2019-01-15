@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="" >
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/bootstrap-theme.css" rel="stylesheet"/>
+        <script src="js/angular.js"></script>
+        <style>
+            input.ng-invalid{
+                background-color: #b94a48;
+            }
+            input.ng-not-empty{
+                background-color: #269abc;
+            }
+             input.ng-empty{
+                background-color: #357ebd;
+            }
+            input.ng-invalid{
+                background-color: #419641;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div>Repeat </div>
+        <form name="myForm" ng-init="name='post@myweb.com'">
+            Emil : <input type="email" name="myEmail" ng-model="name" required/><br>
+            
+            <p>Edit the email address and change email</p>
+            <p> valid : {{myForm.myEmail.$valid}} (if true the value is valid)</p>
+            <p> Dirty : {{myForm.myEmail.$dirty}} (if true the value is change)</p>
+            
+           
+        </form>
+        <form  name="myForm2">
+            Enter Your Name : <input type="number" name="myName" ng-model="myText" required/>
+            Enter Your Name : <input type="email" name="myEmail" ng-model="em" required/>
+            
+        </form>
+    </body>
+</html>

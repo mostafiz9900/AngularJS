@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/bootstrap-theme.css" rel="stylesheet"/>
+        <script src="js/angular.js"></script>
+
+    </head>
+    <body ng-app="myApp">
+        <div>Index write content</div>
+                <div>
+                    <input type="text" ng-model="first"/>
+                    <input type="text" ng-model="last"/>
+                    <h1>{{first + " " + last}}</h1>
+                    <p ng-bind="first">First</p>
+                    <p ng-bind="last">Last</p>
+                </div>
+                <div  ng-init="firstName = 'John'">
+        
+                    <p>The name is <span ng-bind="firstName"></span></p>
+        
+                </div>
+                <div ng-app="myApp" ng-controller="myCtrl">
+        
+                    First Name: <input type="text" ng-model="firstName"><br>
+                    Last Name: <input type="text" ng-model="lastName"><br>
+                    <br>
+                    Full Name: {{firstName + " " + lastName}}
+        
+                </div>
+        
+                <script>
+                    var app = angular.module('myApp', []);
+                    app.controller('myCtrl', function ($scope) {
+                        $scope.firstName = "John";
+                        $scope.lastName = "Doe";
+                    });
+                </script>
+      
+                
+                <a href="directive.html" >Directive</a>
+                <a href="repeat.html" >Repeat</a>
+                <a href="clickChange.html" >ClickChange</a>
+                <a href="valid.html" >Valid</a>
+                <a href="valid_1.html" >Valid_1</a>
+                <a href="inputController.html" >inputController</a>
+                <a href="array.html" >ArrayTable</a>
+
+    </body>
+</html>

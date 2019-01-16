@@ -14,9 +14,18 @@ and open the template in the editor.
         <script src="js/angular.js"></script>
 
     </head>
-    <body>
-        <div>Index write content</div>
+    <body >
+        <div>Repeat </div>
        
-
+        <div ng-app="myApp" ng-controller="myCon">
+            <h5>The URL of this page</h5>
+            <h3>{{myUrl}}</h3>
+        </div>
+        <script>
+            var app=angular.module('myApp',[]);
+            app.controller('myCon', function($scope, $location){
+                $scope.myUrl=$location.absUrl();
+            });
+        </script>
     </body>
 </html>

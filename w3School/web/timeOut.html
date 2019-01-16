@@ -14,9 +14,22 @@ and open the template in the editor.
         <script src="js/angular.js"></script>
 
     </head>
-    <body>
-        <div>Index write content</div>
+    <body >
        
-
+       
+        <div ng-app="myApp" ng-controller="myCon">
+            
+            <h3>{{myHeader}}</h3>
+        </div>
+        <script>
+            var app=angular.module('myApp',[]);
+            app.controller('myCon', function($scope, $timeout){
+                $scope.myHeader="My Header Page";
+                $timeout(function(){
+                    $scope.myHeader="My Header Page and time out page";
+                },
+                        2000);
+            });
+        </script>
     </body>
 </html>

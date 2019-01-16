@@ -15,8 +15,13 @@ and open the template in the editor.
 
     </head>
     <body>
-        <div>Index write content</div>
-       
+        <div>Repeat </div>
+        <form ng-app="" name="myForm">
+            Emil : <input type="email" name="myEmail" ng-model="text"/><br>
+            <span ng-show="myForm.myEmail.$error.email">Not a valid Email</span>
 
+            Emil : <input type="number" name="myNum" ng-model="num"/><br>
+            <span ng-show="myForm.myNum.$error.number"> Not a valid Number</span>
+        </form>
     </body>
 </html>

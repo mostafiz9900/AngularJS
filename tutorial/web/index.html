@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="myModule" ng-controller="myCtrl">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/bootstrap-theme.css" rel="stylesheet"/>
+        <script src="js/angular.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <div >
+            <h2>4+66={{4 + 66}}</h2>
+            <h2>{{'Hello Bangladesh'}}</h2>
+            <h2>{{{name:"Mostafiz"}.name}}</h2>
+            <h2>{{['Math', 'english'][1]}}</h2>
+            <h2>{{msg}}</h2>
+            <h2>Name:{{stu.name}}</h2>
+            <h2>Score:{{stu.score}}</h2>
+            <input type="text" ng-model="msg2"/>
+            <h3>{{msg2}}</h3>
+        </div>
+        <div ng-show="var1">
+            <h1>Show me..</h1>
+        </div>
+        <div>
+            <h1>Fruits</h1>
+            <ul>
+                <li ng-repeat="f in fruits">
+                    {{f}}
+                </li>
+            </ul>
+        </div>
+        <div>
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th>Name</th>
+                    <th>Salary</th>
+                    <th>position</th>
+                </tr>
+                <tr ng-repeat="em in employees">
+                    <td>{{em.name}}</td>
+                    <td>{{em.salary}}</td>
+                    <td>{{em.position}}</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th>Name</th>
+                </tr>
+                <tr ng-repeat="n in count">
+                    <td>{{n.name}}</td>
+                    <td ng-repeat="c in n.city"></td>
+                    <td>{{c.name}}</td>
+
+                </tr>
+            </table>
+        </div>
+        <div>
+            <ul>
+                <li ng-repeat="n in count">
+                    {{n.name}}
+
+                    <ul>
+                        <li ng-repeat="c in n.city">
+                            {{c.name}}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <img ng-src="{{img}}" alt="my image"/>
+           
+        </div>
+        <div>
+             <img ng-src="{{img2}}" alt="sumaiya image"/>
+        </div>
+    </body>
+</html>

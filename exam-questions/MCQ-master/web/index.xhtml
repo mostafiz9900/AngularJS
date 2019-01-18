@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body style="background-color: #444; padding: 0; margin: 0;">
+        <h:form>
+            <div style="background-color: #f0f0f0; width: 75%; margin: auto; padding: 40px 10px 40px 100px;">
+                <c:set var="dem" value="1"/>
+                <c:forEach var="m" items="#{radioView.mcq}" begin="0" end="1">
+                    <h3>#{m.qno}. #{m.question}</h3>
+                    <p:outputPanel id="customPanel" style="margin-bottom:10px">
+                        <p:selectOneRadio id="customRadio#{dem}" value="#{radioView.ans[m.qno-1]}" layout="custom" columns="2">
+                            <f:selectItem itemLabel="#{m.a}" itemValue="A" />
+                            <f:selectItem itemLabel="#{m.b}" itemValue="B" />
+                            <f:selectItem itemLabel="#{m.c}" itemValue="C" />
+                            <f:selectItem itemLabel="#{m.d}" itemValue="D" />
+                        </p:selectOneRadio>
+
+                        <h:panelGrid columns="2" cellpadding="5">
+                            <p:radioButton id="opt#{dem}" for="customRadio#{dem}" itemIndex="0"  />
+                            <h:outputLabel for="opt#{dem}" value="#{m.a}" />                  
+
+                            <p:radioButton id="opt#{dem+1}" for="customRadio#{dem}" itemIndex="1" />
+                            <h:outputLabel for="opt#{dem+1}" value="#{m.b}" />                       
+
+                            <p:radioButton id="opt#{dem+2}" for="customRadio#{dem}" itemIndex="2" />
+                            <h:outputLabel for="opt#{dem+2}" value="#{m.c}" />
+
+                            <p:radioButton id="opt#{dem+3}" for="customRadio#{dem}" itemIndex="3" />
+                            <h:outputLabel for="opt#{dem+3}" value="#{m.d}" />
+
+                        </h:panelGrid>
+                    </p:outputPanel>
+                    <c:set var="dem" value="#{dem+4}"/>
+                </c:forEach>
+                <p:commandButton value="Submit" actionListener="#{radioView.ansShow}" icon="ui-icon-check" oncomplete="PF('dlg').show()" update="a1 a2"/>
+
+                <p:dialog modal="true" resizable="false" widgetVar="dlg" header="Results Summary:-" showEffect="clip">
+                    <h1>Submitted results</h1>
+                    <table border="1" width="100%">
+                        <tr>
+                            <th>Correct Answer:</th>
+                            <td><h:outputText id="a1" value="#{radioView.rans}"/><br/></td>
+                        </tr>
+                        <tr>
+                            <th>Wrong Answer:</th>
+                            <td><h:outputText id="a2" value="#{radioView.fams}"/><br/></td>
+                        </tr>
+
+
+                    </table>
+                    
+
+                </p:dialog>
+            </div>
+        </h:form>
+    </h:body>
+</html>
+

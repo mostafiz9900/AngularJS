@@ -4,4 +4,13 @@
  * and open the template in the editor.
  */
 
-var app=angular.module("myApp", []);
+var apps=angular.module("myApp", []);
+apps.controller("myCtrl2", function ($scope){
+    
+    $scope.names=['Emai','Round','Gender'];
+    $scope.cars={
+        car1:{brand:'food', model:'500', color:'red'},
+        car2:{brand:'Fial', model:'608', color:'white'},
+        car3:{brand:'Volv', model:'900', color:'black'}
+    };
+});

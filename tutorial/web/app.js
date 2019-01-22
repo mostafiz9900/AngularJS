@@ -62,15 +62,23 @@ myApp.controller("myCtrl", function ($scope) {
     var image2 = "sumaiya.jpg";
     $scope.img2 = image2;
 
-    var employees = [
-        {name: 'Mostafizur', salary: '40000', position: 'Exective', status: 1},
-        {name: 'Sofiq', salary: '40000', position: 'Exective', status: 2},
-        {name: 'Mahabub', salary: '30000', position: 'Exective', status: 3},
-        {name: 'Rojina', salary: '500000', position: 'Exective', status: 2},
-        {name: 'Ajat', salary: '40000', position: 'Exective', status: 1},
-        {name: 'Moly', salary: '20000', position: 'Exective', status: 3},
-        {name: 'Mehedi', salary: '40000', position: 'Exective', status: 1},
-        {name: 'Arefin', salary: '45000', position: 'Exective', status: 2}
-    ];
-    $scope.emp = employees;
+//    var employees = [
+//        {name: 'Mostafizur', salary: '40000', position: 'Exective', status: 1},
+//        {name: 'Sofiq', salary: '40000', position: 'Exective', status: 2},
+//        {name: 'Mahabub', salary: '30000', position: 'Exective', status: 3},
+//        {name: 'Rojina', salary: '500000', position: 'Exective', status: 2},
+//        {name: 'Ajat', salary: '40000', position: 'Exective', status: 1},
+//        {name: 'Moly', salary: '20000', position: 'Exective', status: 3},
+//        {name: 'Mehedi', salary: '40000', position: 'Exective', status: 1},
+//        {name: 'Arefin', salary: '45000', position: 'Exective', status: 2}
+//    ];
+   $scope.emp = employees;
+//    $scope.showData=function (){
+//        console.log('showing data....');
+//         $scope.emp = employees;
+//    };
+//    $scope.hideData=function (){
+//        console.log('hiding data....');
+//         $scope.emp = '';
+//    };
 });

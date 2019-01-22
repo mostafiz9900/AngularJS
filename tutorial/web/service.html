@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html ng-app="myModule1" ng-controller="myCtrl">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/bootstrap-theme.css" rel="stylesheet"/>
+        <script src="js/angular.js"></script>
+        <script src="app_1.js"></script>
+
+    </head>
+    <body>
+
+        <div>
+            <!--            <h5>{{msg3}}</h5>
+                        {{myUrl}}-->
+            <h3>{{myvar2}}</h3>
+            <h3>{{myvar3}}</h3>
+            {{myvar}}
+        </div>
+        <div>
+            <input type="text" ng-model="input1"/>
+            <input type="text" ng-model="input2"/>
+            
+            <button ng-click="myFunc(input1,input2)">Click</button>
+            <h1>{{result}}</h1>
+            <h1>{{result2}}</h1>
+        </div>
+    </body>
+</html>

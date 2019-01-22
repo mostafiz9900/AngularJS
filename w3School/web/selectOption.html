@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html ng-app="myApp" ng-controller="myCtrl2">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/bootstrap-theme.css" rel="stylesheet"/>
+        <script src="js/angular.js"></script>
+
+        <script src="model.js"></script>
+
+    </head>
+    <body>
+        <div>Repeat </div>
+        <div>
+            <select ng-model="selectName" ng-options="x for x in names"></select>
+            <select>
+                <option ng-repeat="x in names">{{x}}</option>
+            </select>
+            
+        </div>
+        <div>
+<!--            <select ng-model="selectCar" ng-options="y.brand for (x, y) in cars">
+               
+            </select>-->
+ <select ng-model="selectCar" ng-options="x for (x, y) in cars">
+               
+            </select>
+            <h3>{{selectCar.brand}}</h3>
+            <h4>{{selectCar.model}}</h4>
+            <h5>{{selectCar.color}}</h5>
+        </div>
+
+
+    </body>
+</html>

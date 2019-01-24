@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="myModule">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/bootstrap-theme.css" rel="stylesheet"/>
+        <script src="js/angular.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+        <script src="inputModel.js"></script>
+
+    </head>
+    <body ng-controller="myControl">
+        <div>Repeat </div>
+        <div>
+           
+           Enter Password : <input type="password" ng-model="pass"/>
+           <button ng-click="DisplayAlert(pass)">Show Password</button>
+           <button ng-click="DisplayPrompt()">Display prompt</button>
+            
+        </div>
+           {{count}}
+    </body>
+</html>

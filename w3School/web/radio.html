@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="" >
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/bootstrap-theme.css" rel="stylesheet"/>
+        <script src="js/angular.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>-->
+        <script src="inputModel.js"></script>
+
+    </head>
+    <body>
+        <div>Repeat </div>
+       
+            <form>
+                <input type="radio" value="Mail" ng-model="gender"/>Mail
+                <input type="radio" value="Femail" ng-model="gender"/>Femail
+            </form>
+     
+        <div ng-switch="gender">
+            <div ng-switch-when="Mail">
+                <h3>Mail</h3>
+            </div>
+            <div ng-switch-when="Femail">
+                <h3>Femail</h3>
+            </div>
+        </div>
+        
+        <form>
+            <select ng-model="Subject">
+                <option value="">Select A option</option>
+                <option value="html">html</option>
+                <option value="java">java</option>
+                <option value="English">English</option>
+            </select>
+        </form>
+  <div ng-switch="Subject">
+            <div ng-switch-when="html">
+                <h3>HTML</h3>
+            </div>
+            <div ng-switch-when="java">
+                <h3>JAVA</h3>
+            </div>
+       <div ng-switch-when="English">
+                <h3>ENGLISH</h3>
+            </div>
+        </div>
+
+    </body>
+</html>

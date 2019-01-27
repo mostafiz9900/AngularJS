@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="myModule" ng-controller="myController">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul>
+                        <li><a href="#!/mosta">mosta</a></li>
+                        <li><a href="#!/sofiqul">sofiqul</a></li>
+                        <li><a href="#!/mahabub">mahabub</a></li>
+                        <li><a href="#!/mortoza">mortoza</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-8">
+                  <div ng-view></div>
+
+                </div>
+
+            </div>
+        </div>
+        <script>
+            var myApp = angular.module("myModule", ["ngRoute"]);
+            myApp.controller("myController", function ($scope) {
+//            $scope.mosta = "hello...";
+//            $scope.sofiqul = "hello. sofiqul..";
+//            $scope.mahabub = "hello..mahabub.";
+//            $scope.mortoza = "hello. mortoza..";
+            });
+            myApp.config(function ($routeProvider) {
+             $routeProvider
+                    .when('/mosta', {
+                    templateUrl: 'templates/mosta.html',
+                            controller: 'myController'
+                    })
+                    .when('/sofiqul', {
+                    templateUrl: 'templates/sofiqul.html',
+                            controller: 'myController'
+                    })
+                    .when('/mahabub', {
+                    templateUrl: 'templates/mahabub.html',
+                            controller: 'myController'
+                    })
+                    .when('/mortoza', {
+                    templateUrl: 'templates/mortoza.html',
+                            controller: 'myController'
+                    })
+            });
+        
+        </script>
+    </body>
+</html>
